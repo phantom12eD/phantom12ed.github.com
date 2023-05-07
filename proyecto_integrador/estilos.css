@@ -1,0 +1,16 @@
+body {
+    background-color:#d4f0fc;
+}
+table {
+    border-collapse: collapse;
+    text-align: center;
+}
+th {
+    padding: 8px;
+    border: 1px solid black;
+    background-color: #cccccc;
+}  
+td {
+    padding: 8px;
+    border: 1px solid black;
+}  

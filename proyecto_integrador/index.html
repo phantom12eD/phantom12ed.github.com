@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html>
+<head style="margin-top: auto;">
+	<title>Algoritmos Voraces</title>
+	<style>
+		/* Estilos CSS para el navigation bar */
+		nav {
+			background-color: #333;
+			overflow: hidden;
+		}
+		
+		nav a {
+			float: left;
+			color: white;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+		}
+		
+		nav a:hover {
+			background-color: #ddd;
+			color: black;
+		}
+
+		/* Estilos CSS para los divs de información */
+		.info {
+			display: none;
+			padding: 20px;
+			
+		}
+
+		/* Estilos CSS para el header */
+		header {
+			background-color: #0077b6;
+			color: white;
+			text-align: center;
+			padding: 20px;
+			border: none;
+		}
+		/* Función para alinear imagen a la derecha */
+		.right-image {
+			display: flex;
+			flex-direction: row-reverse;
+			align-items: right;
+}
+	#algoritmos-dijkstra .text-container {
+		display: flex;
+		}
+		#algoritmos-dijkstra .text-container p {
+			flex-grow: 1;
+		}
+		#Floyd-Warshall .text-container {
+		display: flex;
+		}
+		#Floyd-Warshall .text-container p {
+			flex-grow: 1;
+		}
+		#algoritmos-prim .text-container {
+		display: flex;
+		}
+		#algoritmos-prim .text-container p {
+			flex-grow: 1;
+		}
+		#algoritmos-kruskal .text-container {
+		display: flex;
+		}
+		#algoritmos-kruskal .text-container p {
+			flex-grow: 1;
+		}
+		#algoritmo-de-fuerza-bruta .text-container {
+		display: flex;
+		}
+		#algoritmo-de-fuerza-bruta.text-container p {
+			flex-grow: 1;
+		}
+	</style>
+	<script>
+		// Función para mostrar el div de información correspondiente
+		function mostrarInfo(infoID) {
+			// Ocultar todos los divs de información
+			var infos = document.getElementsByClassName("info");
+			for (var i = 0; i < infos.length; i++) {
+				infos[i].style.display = "none";
+			}
+
+			// Mostrar el div de información correspondiente
+			document.getElementById(infoID).style.display = "block";
+		}
+
+		// Mostrar el div de información del inicio cuando la página se carga
+		window.onload = function() {
+			mostrarInfo("inicio");
+		}
+	</script>
+        <meta charset = "urf-8"> 
+        <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+		<link rel="stylesheet"  href="estilos.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" >
+</head>
+<body style="background-color: #f2f2f2;">
+	<!-- Header -->
+	<header>
+		<h1 style="text-align: center;">Algoritmos Voraces</h1>
+	</header>
+
+	<!-- Navigation bar -->
+	<nav style="background-color: #282c34;">
+		<a href="#" onclick="mostrarInfo('inicio')">Inicio</a>
+		<a href="#" onclick="mostrarInfo('algoritmos-dijkstra')">Dijkstra</a>
+		<a href="#" onclick="mostrarInfo('Floyd-Warshall')">Floyd-Warshall</a>
+		<a href="#" onclick="mostrarInfo('algoritmos-prim')">Prim</a>
+		<a href="#" onclick="mostrarInfo('algoritmos-kruskal')">Kruskal</a>
+		<a href="#" onclick="mostrarInfo('algoritmo-de-fuerza-bruta')">Fuerza Bruta</a>
+		<a href="#" onclick="mostrarInfo('algoritmo-Divide-vencerás')">Divide y venceras</a>
+		<a href="#" onclick="mostrarInfo('algoritmo-Backtraking')">Backtraking</a>
+		<a href="#" onclick="mostrarInfo('Programación-dinámica')">Programación dinámica</a>
+	</nav>
+
+	<!-- Contenido de la página web -->
+	<div id="inicio" class="info" style="background-color: #d4f0fc">
+		<h1>¿Que es un algoritmo voraz?</h1>
+		<p style="margin-right: 1000px;">Existe un buen número de métodos que los matemáticos y científicos emplean cuando deben resolver problemas complejos. Uno de los más versátiles y simples de entender es el denominado “algoritmo voraz” (Greedy algorithm). A pesar de que no siempre es capaz de encontrar una respuesta óptima, se lo utiliza con frecuencia dado que es muy rápido. Te contamos en qué consiste, qué ventajas tiene y cómo utilizarlo.</p>
+        <h1>¿?</h1>
+    </div>
+	<!-- inicio del div de dijsktra-->
+	<div id="algoritmos-dijkstra" class="info" style="background-color: #d4f0fc">
+		<h1 style="text-align: center;">Algoritmos dijkstra</h1>
+		<div style="margin-left: 250px;margin-left: 250px;">
+			<div class="text-container">
+				<p>El algoritmo de Dijkstra, también llamado algoritmo de caminos mínimos, es un algoritmo para la determinación del camino más corto dado un vértice origen al resto de los vértices en un grafo con pesos en cada arista.</p>
+		<div class=" right-image" style="margin-right:600px;margin-left:50px ;">
+			<img src="./image/dijkstra.png"  width="250"alt="Algoritmo de Dijkstra">
+		</div>
+		</div>
+		<div>
+			<dt style="font-size: 20px;margin-top: 80px;">En la tabla que veran a continuación colocaremos las ventajas y las desventajas del  algoritmo de dijsktra </dt>
+		</div>
+		<div>
+			<dt style="margin-right: 500px;">
+				<table style="margin-top: 20px;">
+				<tr >
+					<th>Ventajas</th>
+					<th>Desventajas</th>
+				</tr>
+				<tr>
+					<td>1.-Eficiencia: el algoritmo de Dijkstra tiene una complejidad de tiempo de O(V^2), donde V es el número de nodos en el grafo. Para grafos más grandes, se pueden utilizar implementaciones más eficientes, como Dijkstra con cola de prioridad que tiene una complejidad de tiempo de O((E+V) log V). En cualquier caso, el algoritmo de Dijkstra es uno de los algoritmos más eficientes para encontrar el camino más corto en un grafo.</td>
+					<td>Restricción de pesos no negativos: el algoritmo de Dijkstra solo funciona correctamente en grafos con pesos no negativos. Si hay aristas con pesos negativos, se deben usar otros algoritmos, como Bellman-Ford, que pueden manejar estos casos.</td>
+				</tr>
+				<tr>
+					<td>2.-Generalidad: el algoritmo de Dijkstra se puede aplicar a cualquier grafo ponderado con pesos no negativos, lo que lo hace útil para una amplia variedad de problemas en diferentes áreas.</td>
+					<td>Complejidad de memoria: el algoritmo de Dijkstra requiere mantener un registro de los nodos visitados y sus distancias, lo que puede requerir mucho espacio de memoria en grafos grandes.</td>
+				</tr>
+				<tr>
+					<td>3.-Precisión: el algoritmo de Dijkstra siempre encuentra el camino más corto en un grafo ponderado con pesos no negativos, lo que lo hace útil en situaciones en las que se requiere precisión en las soluciones.</td>
+					<td>Requiere un nodo de origen: el algoritmo de Dijkstra requiere un nodo de origen para comenzar la búsqueda del camino más corto. Si no se especifica un nodo de origen, se debe usar otro algoritmo, como Floyd-Warshall, que puede encontrar el camino más corto entre todos los pares de nodos.</td>
+				</tr>
+				<tr>
+					<td>4-.-Versatilidad: el algoritmo de Dijkstra se puede modificar para encontrar todos los caminos más cortos desde un nodo de origen a todos los demás nodos en un grafo, lo que lo hace útil para problemas de análisis de redes.</td>
+					<td> No garantiza el camino más corto en grafos con pesos negativos: si hay ciclos negativos en el grafo, el algoritmo de Dijkstra no funciona correctamente y puede dar resultados erróneos. </td>
+				</tr>
+				</table>
+			</dt>
+			<div style="margin-top: 30px;font-size: 20px;font-weight: 700 px;">
+				Pasos a seguir del algoritmo dijkstra
+			</div>
+			<dt style="margin-top: 20px;">
+				Para comprender el Algoritmo de Dijkstra, tomemos un gráfico y encontremos el camino más corto desde el origen hasta todos los nodos.
+				Considere el siguiente gráfico y src = 0
+			</dt>
+			<img src="./image/ejemploD.jpg" width="400" alt="200px" style="margin-top: 20px;">
+			<dt style="text-align:left ;">
+				<ul>
+					Paso 1:
+					<li >
+					El conjunto sptSet inicialmente está vacío y las distancias asignadas a los vértices son {0, INF, INF, INF, INF, INF, INF, INF} donde INF indica infinito.  
+					</li>
+					<li>
+						Ahora elija el vértice con un valor de distancia mínimo. Se selecciona el vértice 0, inclúyalo en sptSet .
+						<p style="margin-top: 0;"> Entonces sptSet se convierte en {0}. Después de incluir 0 en sptSet , actualice los valores de distancia de sus vértices adyacentes.</p>
+					</li>
+					<li style="margin-top:0px;">
+						Los vértices adyacentes de 0 son 1 y 7. Los valores de distancia de 1 y 7 se actualizan como 4 y 8. 
+					</li>
+				</ul>
+				<div> 
+				El siguiente subgráfico muestra los vértices y sus valores de distancia, solo se muestran los vértices con valores de distancia finitos. Los vértices incluidos en SPT se muestran en color verde .
+				</div>
+			</dt>
+			<img src="./image/empl2.jpg" alt="250px" style="margin-top: 20px;margin-left:200px;" width="90">
+			<dt>
+				<ul>
+					Paso 2:
+					<li>
+						Elija el vértice con un valor de distancia mínimo y que no esté incluido en SPT (no en sptSET). El vértice 1 se selecciona y se agrega a sptSet. 
+					</li>
+					<li>
+						Entonces sptSet ahora se convierte en {0, 1}. Actualice los valores de distancia de los vértices adyacentes de 1.
+					</li>
+					<li>
+						El valor de la distancia del vértice 2 se convierte en 12 .
+					</li>
+				</ul>
+			</dt>
+			<img src="./image/DIJ2.jpg" alt="300px" style="margin-top: 20px;margin-left: 200px;">
+			<dt>
+				<ul>
+					Paso 3:
+					<li>
+						Elija el vértice con un valor de distancia mínimo y que no esté incluido en SPT (no en sptSET). Se selecciona el vértice 7. Entonces sptSet ahora se convierte en {0, 1, 7}. 
+					</li>
+					<li>
+						Actualice los valores de distancia de los vértices adyacentes de 7. El valor de distancia de los vértices 6 y 8 se vuelve finito ( 15 y 9 respectivamente). 
+					</li>
+				</ul>
+			</dt>
+			<img src="./image/DIJ3.jpg" alt="400px" style="margin-top: 20px;margin-left: 200px;">
+			<dt>
+				<ul>
+					Paso 4:
+					<li>
+						Elija el vértice con un valor de distancia mínimo y que no esté incluido en SPT (no en sptSET). Se elige el vértice 6. Entonces sptSet ahora se convierte en {0, 1, 7, 6} .  
+					</li>
+					<li>
+						Actualice los valores de distancia de los vértices adyacentes de 6. Se actualizan los valores de distancia de los vértices 5 y 8.
+					</li>
+				</ul>
+				<img src="./image/DIJ4.jpg" alt="400px" style="margin-top: 20px;margin-left: 200px;">
+				<div style="margin-top: 20px;">
+					Repetimos los pasos anteriores hasta que sptSet incluya todos los vértices del gráfico dado. Finalmente, obtenemos el siguiente árbol de ruta más corta (SPT).
+				</div>
+				<img src="./image/DIJ5.jpg" alt="500px" style="margin-top: 20px;margin-left: 200px;">
+                <div style="margin-top: 30px;">
+                <p> Aqui un pequeño video  que habla sobre el  algoritmo de dijsktra</p>
+                <video width="640" height="360" controls style="margin-top: 20px;">
+                <source src="./image/IO Tutoriales - 02 Algoritmo de DIJKSTRA.mp4" type="video/mp4">
+                Tu navegador no soporta la etiqueta de video.
+                </video>
+				</div>
+			
+		</div>
+			</div>
+	</div>
+	<!-- Fin de div de dijsktra-->
+	
+	<!-- inicio del div de floyd-->
+	<div id="Floyd-Warshall" class="info" style="background-color: #d4f0fc ;">
+		<h1 style="text-align: center;">Algoritmo Floyd-Warshall</h1>
+		<div style="margin-left: 250px;margin-left: 250px;">
+		<div class="text-container">
+			<p>El algoritmo de Floyd-Warshall es un algoritmo de ruta más corta para gráficos . Al igual que el algoritmo de Bellman-Ford o el algoritmo de Dijkstra , calcula el camino más corto en un gráfico. Sin embargo, Bellman-Ford y Dijkstra son algoritmos de fuente única y ruta más corta. Esto significa que solo calculan la ruta más corta desde una sola fuente. Floyd-Warshall, por otro lado, calcula las distancias más cortas entre cada par de vértices en el gráfico de entrada.</p>
+	<div class=" right-image" style="margin-right:600px;margin-left:50px ;">
+		<img src="./image/Floyd-Warshall-Algorithm.png"  width="250"alt="Algoritmo de Dijkstra">
+	</div>
+		</div>
+		<div>
+			<dt style="font-size: 20px;margin-top: 80px;">En la tabla que veran a continuación colocaremos las ventajas y las desventajas del  algoritmo Floyd-Warshall </dt>
+		</div>		
+		<div style="margin-top: 20px;margin-right: 500px;">
+			<table >
+				<tr >
+					<th>Ventajas</th>
+					<th>Desventajas</th>
+				</tr>
+				<tr>
+					<td>Encuentra la ruta más corta entre todos los pares de nodos en un grafo ponderado con peso negativo.</td>
+					<td>Tiene complejidad de tiempo de O(V^3), lo que puede ser ineficiente para grafos grandes.</td>
+				</tr>
+				<tr>
+					<td>Funciona para grafos con pesos no negativos o negativos.</td>
+					<td>Requiere una gran cantidad de memoria para almacenar la tabla de distancias de todos los pares.</td>
+				</tr>
+				<tr>
+					<td>Es un algoritmo de programación dinámica, lo que significa que encuentra la solución óptima al subproblema y la combina para obtener la solución óptima al problema general.</td>
+					<td>No funciona para grafos con ciclos negativos alcanzables desde el nodo origen.</td>
+				</tr>
+				<tr>
+					<td>Funciona para grafos no dirigidos y dirigidos.</td>
+					<td>No es útil para encontrar la ruta más corta entre dos nodos en particular.</td>
+				</tr>
+			</table>
+		</div>
+		<div style="margin-right:500px ;">
+			<div style="margin-top: 30px;font-size: 20px;font-weight: 700 px;">
+				Pasos a seguir del algoritmo   
+			</div>
+			<div style="margin-top: 10px;">
+				<p>Tomaremos la siguiente imagen para expliacar los pasos a seguir</p>
+				<img src="./image/fw.jpg" alt="200 px" style="margin-top: 5px;">
+			</div>
+			<dt style="margin-top: 10px">
+				<ul>Sigue los pasos a continuación para encontrar el camino más corto entre todos los pares de vértices.</ul>
+				<div style="font-size: 20px;font-weight: 700 px;">Paso 1</div>
+				<li>
+					Crea una matriz de dimensión donde n es el número de vértices. La fila y la columna se indexan como A<sup>0</sup> n*n i y j respectivamente.i y j son los vértices de la gráfica.
+					cada celda A[i] [j] se llena con la distancia de vértice a vértice. Si no hay camino de vértice a vértice, la celda se deja como infinita.
+				</li>
+				<figure>
+					<img src="./image/martiz.jpg" alt="100 px" width="400" style="margin-top:10px;">
+					<figcaption>Rellene cada celda con la distancia entre el i-ésimo y el j-ésimo vértice</figcaption>
+				</figure>
+				<div style="font-size: 20px;font-weight: 700 px;">Paso 2</div>
+				<li>
+					Ahora, crea una matriz usando matrix. Los elementos de la primera columna y la primera fila se dejan como están. Las celdas restantes se llenan de la siguiente manera. Dejar A<sup>1</sup> A<sup>0</sup>
+					<div style="margin-top: 10px"> k ser el vértice intermedio en el camino más corto desde el origen hasta el destino. En este paso,k es el primer vértice. A[i][j]está lleno de (A[i][k] + A[k][j]) if (A[i][j] > A[i][k] + A[k][j]).</div>
+					<div style="margin-top: 10px;">Es decir, si la distancia directa desde el origen hasta el destino es mayor que el camino a través del vértice k, entonces la celda se llena con A [i] [k] + A [k] [j].</div>
+					<div style="margin-top: 10px;">En este paso, k es el vértice 1. Calculamos la distancia desde el vértice de origen hasta el vértice de destino a través de este vértice k.</div>
+					<div> <img src="./image/fw-Matrix-2.jpg" alt="50 px" width="600" style="margin-top: 20px;">
+						<figcaption>Calcule la distancia desde el vértice de origen hasta el vértice de destino a través de este vértice k</figcaption>
+					</div>
+					<DIV style="margin-top: 10px;">Por ejemplo: Para , la distancia directa del vértice 2 al 4 es 4 y la suma de la distancia del vértice 2 al 4 a través del vértice (es decir, del vértice 2 al 1 y del vértice 1 al 4) es 7. Dado que , se llena con 4 A <sup>1</sup>[2, 4]4 < 7A<sup>0</sup>[2, 4]</DIV>
+				</li>
+				<div style="font-size: 20px;font-weight: 700 px;margin-top: 12px;">Paso 3</div>
+				<li style="margin-top:  10px;">
+					Del mismo modo, se crea utilizando . Los elementos de la segunda columna y la segunda fila se dejan como están. En este paso,A<sup>2</sup> A<sup>1</sup> 
+					<p>k es el segundo vértice (es decir, el vértice 2). Los pasos restantes son los mismos que en el paso 2 .</p>
+					<div><img src="./image/fw-Matrix-3.jpg" alt="100" width="600"  style="margin-top: 20px;">
+						<figcaption>Calcule la distancia desde el vértice de origen hasta el vértice de destino a través de este vértice 2</figcaption>
+					</div>
+				</li>
+				<div style="font-size: 20px;font-weight: 700 px;margin-top: 12px;">Paso 4</div>
+				<li style="margin-top: 10px;">
+					Del mismo modo, y también se crea. A<sup>3</sup>A<sup> 4</sup>
+					<p> <img src="./image/fw-Matrix-4.jpg" alt="100" width="600" style="margin-top: 12px;">
+						<figcaption>Calcule la distancia desde el vértice de origen hasta el vértice de destino a través de este vértice 3</figcaption>
+					</p>
+				</li>
+				<p><img src="./image/fw-Matrix-5.jpg" alt="100" width="600" style="margin-top: 30px;">
+				<figcaption>Calcule la distancia desde el vértice de origen hasta el vértice de destino a través de este vértice 4</figcaption>
+				</p>
+				<div style="font-size: 20px;font-weight: 700 px;margin-top: 12px;">Paso 5</div>
+				<li style="margin-top: 10px;">
+					A<sup>4</sup> da el camino más corto entre cada par de vértices.
+				</li>
+				<div style="margin-top: 30px;">
+					<p style="font-size: 30px;">Aqui un pequeño ejemplo del algoritmo Floyd-Warshall</p>
+					<video width="640" height="360" controls style="margin-top: 20px;">
+						<source src="./image/algoritmo de Floyd-Warshall.mp4" type="video/mp4">
+						Tu navegador no soporta la etiqueta de video.
+					</video>
+				</div>
+			</dt>
+		</div>
+	</div>
+	</div>
+		<!-- Fin de div de Floyd-Warshall-->
+
+		<!--inicio de div de prim-->
+	<div id="algoritmos-prim" class="info" style="background-color: #d4f0fc">
+		<h1 style="text-align: center;">Algoritmos Prim</h1>
+		<div style="margin-left: 250px;margin-left: 250px;">
+			<div class="text-container">
+				<p>El algoritmo de Prim, dado un grafo conexo, no dirigido y ponderado, encuentra un árbol de expansión mínima. Es decir, es capaz de encontrar un subconjunto de las aristas que formen un árbol que incluya todos los vértices del grafo inicial, donde el peso total de las aristas del árbol es el mínimo posible.</p>
+		<div class=" right-image" style="margin-right:600px;margin-left:50px ;">
+			<img src="./image/7.png"  width="250"alt="Algoritmo de Prim">
+		</div>
+			</div>
+		<div>
+			<dt style="font-size: 20px;margin-top: 80px;">En la tabla que veran a continuación colocaremos las ventajas y las desventajas del  algoritmo de Prim </dt>
+		</div>
+		<div  style="margin-top: 20px;margin-right: 500px;">
+			<table>
+				<tr >
+					<th>Ventajas</th>
+					<th>Desventajas</th>
+				</tr>
+				<tr>
+					<td>Es un algoritmo de aprendizaje supervisado eficiente</td>
+					<td>Sólo es adecuado para problemas de clasificación binaria</td>
+				</tr>
+				<tr>
+					<td>Produce modelos simples y fácilmente interpretables</td>
+					<td>Requiere una gran cantidad de datos para el entrenamiento</td>
+				</tr>
+				<tr>
+					<td>Puede manejar datos con alta dimensionalidad</td>
+					<td>Puede tener dificultades con datos que tienen ruido o errores</td>
+				</tr>
+				<tr>
+					<td>Puede ser utilizado para la selección de características</td>
+					<td>Puede no ser el mejor algoritmo para problemas de clasificación</td>
+				</tr>
+			</table>
+		</div>
+			<div style="margin-right:500px;margin-top: 20PX;">
+				<ul style="font-size: 20px;"> Funcionamiento del algoritmo de Prim</ul>
+				<li>Se marca un vértice cualquiera. Será el vértice de partida.</li>
+				<li>Se selecciona la arista de menor peso incidente en el vértice seleccionado anteriormente y se selecciona el otro vértice en el que incide dicha arista.</li>
+				<li>Repetir el paso 2 siempre que la arista elegida enlace un vértice seleccionado y otro que no lo esté. Es decir, siempre que la arista elegida no cree ningún ciclo.</li>
+				<li>El árbol de expansión mínima será encontrado cuando hayan sido seleccionados todos los vértices del grafo.</li>
+				<ul style="font-size: 20px;" > Los pasos a seguir serian los siguientes</ul>
+					<li>	
+						Este es el grafo inicial. Los números indican el peso de las aristas. Se elige de manera aleatoria uno de los vértices que será el vértice de partida. En este caso se ha elegido el vértice D.
+					</li>
+					<img src="./image/1.png"  width="250"alt="Algoritmo de Prim" style="margin-top: 20PX;margin-left: 200px;">
+					<li>		
+					Se selecciona la arista de menor peso de entre todas las incidentes en el vértice D, siempre que la arista seleccionada no cree ningún ciclo. En este caso es la arista AD.
+					</li>
+					<img src="./image/2.png" width="250" style="margin-top: 20PX;margin-left: 200px;">
+					<li>
+						Ahora se selecciona la arista de menor peso de entre todas las incidentes en los vértices D y A, siempre que la arista seleccionada no cree ningún ciclo. En este caso es la arista DF.
+					</li>
+					<img src="./image/3.png" width="250" style="margin-top: 20px;margin-left: 200px; ">
+					<li>
+						Se selecciona la arista de menor peso de entre todas las incidentes en los vértices D, A y F, siempre que la arista seleccionada no cree ningún ciclo. En este caso es la arista AB. Llegado a este punto, la arista DB no podrá ser seleccionada, ya que formaría el ciclo ABD.
+					</li>
+					<img src="./image/4.png" width="250" style="margin-top: 20px;margin-left: 200px; ">
+					<li>
+						Se selecciona la arista de menor peso de entre todas las incidentes en los vértices D, A, F y B, siempre que la arista seleccionada no cree ningún ciclo. En este caso es la arista BE. Llegado a este punto, las aristas DE y EF no podrán ser seleccionadas, ya que formarían los ciclos ABED y ABEFD respectivamente.
+					</li>
+					<img src="./image/5.png" width="250" style="margin-top: 20px;margin-left: 200px; ">
+					<li>
+						Se selecciona la arista de menor peso de entre todas las incidentes en los vértices D, A, F, B y E, siempre que la arista seleccionada no cree ningún ciclo. En este caso es la arista EC. Llegado a este punto, la arista BC no podrá ser seleccionada, ya que formaría el ciclo BEC.
+					</li>
+					<img src="./image/6.png" width="250" style="margin-top: 20px;margin-left: 200px; ">
+					<li>
+						Solo que disponible el vértice G, por lo tanto se selecciona la arista de menor peso que incide en dicho vértice. Es la arista EG. Como todos los vértices ya han sido seleccionados el proceso ha terminado. Se ha obtenido el árbol de expansión mínima con un peso de 39.
+					</li>
+					<img src="./image/8.png-removebg-preview.png" width="250" style="margin-top: 20px;margin-left: 200px; ">
+			</div>
+			<div style="margin-top: 30px;">
+				<p style="font-size: 30px;">Aqui un pequeño ejemplo del algoritmo de Prim</p>
+				<video width="640" height="360" controls style="margin-top: 10px;">
+					<source src="./image/Algoritmo de Prim.mp4" type="video/mp4">
+					Tu navegador no soporta la etiqueta de video.
+				</video>
+			</div>
+		</div>	
+	</div>
+			<!-- Fin de div de Prim-->
+
+			<!-- inicio de div de kruskal-->
+			<div id="algoritmos-kruskal" class="info"  style="background-color: #d4f0fc">
+				<h1 style="text-align: center;">Algoritmos Kruskal</h1>
+				<div style="margin-left: 250px;margin-left: 250px">
+					<div class="text-container">
+						<p>El algoritmo de Prim, dado un grafo conexo, no dirigido y ponderado, encuentra un árbol de expansión mínima. Es decir, es capaz de encontrar un subconjunto de las aristas que formen un árbol que incluya todos los vértices del grafo inicial, donde el peso total de las aristas del árbol es el mínimo posible.</p>
+				<div class=" right-image" style="margin-right:600px;margin-left:50px ;">
+					<img src="./image/7.png"  width="250"alt="Algoritmo de Prim">
+				</div>
+					</div>
+					<div>
+						<dt style="font-size: 20px;margin-top: 80px;">En la tabla que veran a continuación colocaremos las ventajas y las desventajas del  algoritmo kruskal </dt>
+					</div>
+					<div style="margin-top: 20px;margin-right: 500px;">
+						<table>
+							<tr>
+								<th>Ventajas</th>
+								<th>Desventajas</th>
+							</tr>
+							<tr>
+								<td>Es un algoritmo simple y fácil de implementar.</td>
+								<td>Puede ser menos eficiente que otros algoritmos en grafos densos.</td>
+							</tr>
+							<tr>
+								<td>Produce un árbol de expansión mínima (MST) garantizado para grafos ponderados sin ciclo.</td>
+								<td>Puede ser menos adecuado para grafos con pesos negativos, ya que puede generar un MST incorrecto en ese caso.</td>
+							</tr>
+							<tr>
+								<td>Es un algoritmo voraz (greedy), lo que significa que toma decisiones óptimas en cada paso para lograr el resultado final óptimo.</td>
+								<td>Puede generar árboles de expansión mínima no únicos en algunos casos, lo que puede requerir una solución adicional para seleccionar el MST óptimo.</td>					
+							</tr>
+							<tr>
+								<td>Tiene una complejidad de tiempo de O(E log E), donde E es el número de aristas del grafo, lo que lo hace eficiente para grafos dispersos.</td>
+								<td>Puede ser difícil de implementar correctamente en algunos casos, especialmente en grafos grandes y complejos</td>
+							</tr>
+							<tr>
+								<td>Es adecuado para aplicaciones en las que se requiere una red de comunicación eficiente, como en la planificación de redes de transporte o la optimización de rutas de entrega.</td>
+								<td>Puede ser menos adecuado para aplicaciones en las que se requiere una estructura jerárquica explícita, ya que los árboles de expansión mínima no tienen una raíz específica.</td>
+							</tr>
+						</table>
+					</div>
+					<div style="margin-right:500px;margin-top: 20PX;">
+						<ul>Funcionamiento del algoritmo kruskal</ul>
+						<li>Se selecciona, de entre todas las aristas restantes, la de menor peso siempre que no cree ningún ciclo.</li>
+						<li>Se repite el paso 1 hasta que se hayan seleccionado |V| - 1 aristas.</li>
+						<p>  Siendo V el número de vértices.</p>
+						<ul style="font-size: 20px;" > Los pasos a seguir serian los siguientes</ul>
+						<li>
+							Este es el grafo inicial. Los números indican el peso de las aristas. Se elige de manera aleatoria uno de los vértices que será el vértice de partida. N este caso se ha elegido el vértice D.
+						</li>
+						<img src="./image/11.png" width="250" style="margin-top: 20px;margin-left: 200px;">
+						<li>
+							Se selecciona, de entre todas las aristas restantes, la de menor siempre que no cree ningún ciclo. Las aristas de menor peso son las aristas AD y CE (5). Se ha seleccionado de manera aleatoria la arista AD.
+						</li>
+						<img src="./image/12.png" width="250" style="margin-top: 20px;margin-left: 200px">
+						<li>
+							Se selecciona, de entre todas las aristas restantes, la de menor siempre que no cree ningún ciclo. Ésta es la arista CE.
+						</li>
+						<img src="./image/13.png" width="250" style="margin-top: 20px;margin-left: 200px;">
+						<li>
+							Seleccionamos DF, con peso 6, que es la siguiente arista de menor peso que no forma ciclos.
+						</li>
+						<img src="./image/14.png" width="250" style="margin-top: 20px;margin-left: 200px">
+						<li>
+							De las aristas restantes, las de menor peso son las aristas AB y BE, de peso 7. AB se elige aleatoriamente, y se añade al conjunto de las aristas seleccionadas. De este modo, la arista DB no puede ser seleccionada ya que formaría el ciclo ADB. Por tanto la marcamos en rojo.
+						</li>
+						<img src="./image/15.png" width="250" style="margin-top: 20px;margin-left: 200px;">
+						<li>
+							Siguiendo el proceso seleccionamos la arista BE con peso 7. Además marcamos en rojo las aristas BC, DE y FE ya que formarían los ciclos BCE, DEBA, FEBAD respectivamente.
+						</li>
+						<img src="./image/16.png" width="250" style="margin-top: 20px;margin-left: 200px;">
+						<li>
+							Por último se selecciona la arista EG de peso 9. Como han sido seleccionadas un número de aristas igual al número de vértices menos uno, el proceso ha terminado. Se ha obtenido el árbol de expansión mínima con un peso de 39.
+						</li>
+						<img src="./image/17.png" width="250" style="margin-top: 20px;margin-left: 200px;">
+					</div>
+					<div style="margin-top: 30px;">
+						<p style="font-size: 30px;">Aqui un pequeño ejemplo del algoritmo de Prim</p>
+						<video width="640" height="360" controls style="margin-top: 10px;">
+							<source src="./image/Algoritmo de Kruskal.mp4" type="video/mp4">
+							Tu navegador no soporta la etiqueta de video.
+						</video>
+					</div>
+				</div>
+			</div>
+			<!--fin de div de kruskal-->
+
+			<!--inicio div de fuerza bruta-->
+			<div id="algoritmo-de-fuerza-bruta" class="info" style="background-color: #d4f0fc;">
+				<h1 style="text-align:center;">Algoritmos de fuerza bruta</h1>
+				<div style="margin-left: 250px;margin-left: 250px">
+					<div class="text-container">
+						<p>Un ataque de fuerza bruta consiste en adivinar la contraseña y/o el nombre de usuario de una persona por medio de la automatización de pruebas de ensayo y error. Algunas herramientas permiten realizar estas pruebas y simular que cada una de ellas proviene de un host diferente. </p>
+				<div class=" right-image" style="margin-right:600px;margin-left:50px ;">
+					<img src="./image/que-es-ataque-fuerza-bruta.jpg"  width="250"alt="Algoritmo de ataques de fuerza bruta">
+				</div>
+					</div>
+				<div>
+					<dt style="font-size: 20px;margin-top: 80px;">En la tabla que veran a continuación colocaremos las ventajas y las desventajas de los algoritmos de ataque de fuerza bruta.</dt>
+				</div>
+				<div  style="margin-top: 20px;margin-right: 500px;">
+					<table>
+					<tr>
+						<th>Ventajas</th>
+						<th>Desventajas</th>
+					</tr>
+					<tr>
+						<td>Pueden ser efectivos en el descifrado de contraseñas y credenciales débiles.</td>
+						<td>Pueden ser ineficientes y requieren mucho tiempo y recursos para ejecutarse.</td>
+					</tr>
+					<tr>
+						<td>Son relativamente simples de implementar y no requieren conocimientos especializados.</td>
+						<td>Pueden ser detectados y bloqueados fácilmente por sistemas de seguridad modernos.</td>
+					</tr>
+					<tr>
+						<td>Son útiles para demostrar vulnerabilidades de seguridad y resaltar la importancia de tener contraseñas fuertes y políticas de seguridad adecuadas.</td>
+						<td>Son ilegales y pueden llevar a consecuencias legales graves, incluyendo multas y sentencias de prisión.</td>
+					</tr>
+					<tr>
+						<td>Son una buena opción si no hay otra forma de acceder a un sistema protegido o si se necesita acceder rápidamente a un sistema durante una emergencia.</td>
+						<td>No son efectivos contra contraseñas complejas y aleatorias generadas por computadora.</td>
+					</tr>
+					<tr>
+						<td>Pueden ser útiles para fines educativos y de investigación en ciberseguridad.</td>
+						<td>Pueden causar daños irreparables a los sistemas, especialmente si se utilizan con fines maliciosos.</td>
+					</tr>
+					</table>
+				</div>
+				<div style="margin-right:500px;margin-top: 20PX;">
+					<p style="font-size: 20px;">A continuación les mostrare un pequeño ejemplo de como seria un ataque de fuerza bruta</p>
+					<ul>Para aprender cómo hacer un ciberataque de fuerza bruta, te explicaremos el paso a paso para llevar a cabo un ejercicio de laboratorio y observar cómo funciona.
+						<li>Crea dos máquinas virtuales. Una de ellas, con el sistema operativo para pentesters, Kali Linux; la otra, con un sistema operativo Windows 7 (la versión más antigua posible). También puedes optar por una máquina virtual desarrollada intencionalmente con vulnerabilidades, como Metasploitable 1, 2 o 3.</li>
+						<li>Crea dos diccionarios: uno para usuarios y otro para contraseñas. Los puedes descargar en internet o construirlos tú mismo por medio de generadores de diccionarios de contraseñas.</li>
+						<li>Abre Hydra en tu máquina con Kali Linux, por medio del comando «xhydra», que puedes ejecutar en una terminal del sistema.</li>
+						<li>Al ejecutar el comando «xhydra», se abrirá la interfaz gráfica de Hydra, el programa estándar para hacer ataques de fuerza bruta en auditorías de seguridad.</li>
+						<ul>Para usar Hydra y entender cómo hacer un ciberataque de fuerza bruta debes:
+							<li>Establecer la dirección IP de tu máquina Windows 7 o Metasploitable. Para conocer la dirección IP de tus máquinas, ejecuta el comando «ipconfig» desde sus consolas.</li>
+							<li>Ahora, escoge el puerto donde se encuentre el servicio que deseas poner a prueba. Por ejemplo, si quieres dirigir el ataque al protocolo SSH, elige el puerto 22.</li>
+							<li> Escoge el protocolo al que desees dirigir el ataque. Si has elegido el puerto 22, selecciona el protocolo correspondiente, que es el SSH.</li>
+							<li>Habilita la opción SSL para que el sistema no detecte el ataque. </li>
+							<li>Habilita la opción «Show attempts» si deseas ver los intentos hechos por el programa.</li>
+							<li>Dirígete a la pestaña «Password«.</li>
+							<li>Elige el archivo de texto con el diccionario de nombres de usuario en el campo «Username list«.</li>
+							<li>Elige el archivo de texto con el diccionario de contraseñas en el campo «Password list«.</li>
+							<li>En la opción «Tuning«, reduce el número de tareas «Number of tasks» a 5, para que el sistema soporte las peticiones.</li>
+							<li>Finalmente, ejecuta el proceso con el botón «Start«.</li>
+						</ul>
+					</ul>
+				</div>
+				<div style="margin-top: 30px;">
+					<p style="font-size: 30px;">Aqui un pequeño ejemplo del algoritmo de Prim</p>
+					<video width="640" height="360" controls style="margin-top: 10px;">
+						<source src="./image/Algoritmo Fuerza Bruta.mp4" type="video/mp4">
+						Tu navegador no soporta la etiqueta de video.
+					</video>
+				</div>
+			</div>
+			</div>
+
+
+
+			<div id="algoritmo-Divide-vencerás" class="info">
+		<h1>Algoritmo divide y venceras</h1>
+		<p>ejemplo </p>
+			</div>
+
+
+
+			<div id="algoritmo-Backtraking" class="info">
+		<h1>Algoritmo Backtraking</h1>
+		<p>ejemplo de Backtraking</p>
+			</div>
+
+
+
+			<div id="Programación-dinámica" class="info">
+		<h1>Programación dinámica</h1>
+		<p>ejemplo de Programación dinámica</p>
+			</div>
+
+
+
+		</body>
+            </html>

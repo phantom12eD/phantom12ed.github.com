@@ -1,3 +1,4 @@
+style
 p{
     color:red;
 }
@@ -8,4 +9,25 @@ p{
 }
 #boton-pago{
     background-color: yellow;
+    height: 100px;
+}
+
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+}
+
+th, td {
+  padding: 8px;
+  border: 1px solid black;
+}
+
+th {
+  background-color: #cccccc;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
 }

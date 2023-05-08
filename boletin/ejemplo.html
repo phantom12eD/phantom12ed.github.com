@@ -1,19 +1,56 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Mi tabla de ventajas y desventajas</title>
+<head>
+	<title>Ejemplo de div con nav bar</title>
+	<style>
+		/* Estilos para el div que ocupa una cuarta parte de la pantalla */
+		.div-cuarto {
+			height: 100vh; /* El div ocupa el 25% de la altura total de la pantalla */
+			width: 25%; /* El div ocupa el 25% de la anchura total de la pantalla */
+			float: left; /* El div se alinea a la izquierda */
+			background-color: #f0f0f0; /* Fondo gris claro */
+		}
 
-  </head>
-  <body>
-    <table>
-      <tr>
-        <th>Ventajas</th>
-        <th>Desventajas</th>
-      </tr>
-      <tr>
-        <td>Provee beneficios A, B y C</td>
-        <td>Puede tener consecuencias X, Y y Z</td>
-      </tr>
-    </table>
-  </body>
+		/* Estilos para la barra de navegación */
+		.navbar {
+			background-color: #333; /* Fondo negro */
+			overflow: hidden; /* Para que los elementos que se salgan del tamaño de la barra de navegación se oculten */
+		}
+
+		/* Estilos para los enlaces dentro de la barra de navegación */
+		.navbar a {
+			float: left; /* Los enlaces se alinean a la izquierda */
+			color: white; /* Texto en color blanco */
+			text-align: center; /* El texto se alinea al centro */
+			padding: 14px 16px; /* Añade un espacio alrededor del texto */
+			text-decoration: none; /* Quita la decoración del texto */
+			font-size: 17px; /* Tamaño de fuente de los enlaces */
+		}
+
+		/* Cambia el color del enlace cuando el cursor está encima */
+		.navbar a:hover {
+			background-color: #ddd; /* Fondo gris claro */
+			color: black; /* Texto en color negro */
+		}
+
+		/* Cambia el color del enlace activo */
+		.navbar a.active {
+			background-color: #4CAF50; /* Fondo verde */
+			color: white; /* Texto en color blanco */
+		}
+	</style>
+</head>
+<body>
+	<!-- El div que ocupa una cuarta parte de la pantalla -->
+	<div class="div-cuarto">
+		<!-- La barra de navegación -->
+		<div class="navbar">
+			<!-- Enlaces de la barra de navegación -->
+			<a class="active" href="#">Inicio</a>
+			<a href="#">Acerca de</a>
+			<a href="#">Contacto</a>
+		</div>
+	</div>
+</body>
 </html>
+

@@ -79,7 +79,24 @@
 		#algoritmo-Divide-vencerás.text-container p {
 			flex-grow: 1;
 		}
-		
+		#algoritmo-Backtraking .text-container {
+		display: flex;
+		}
+		#algoritmo-Backtraking.text-container p {
+			flex-grow: 1;
+		}
+		#Programación-dinámica .text-container {
+		display: flex;
+		}
+		#Programación-dinámica.text-container p {
+			flex-grow: 1;
+		}
+		#inicio .text-container {
+		display: flex;
+		}
+		#inicio.text-container p {
+			flex-grow: 1;
+		}
 	</style>
 	<script>
 		// Función para mostrar el div de información correspondiente
@@ -124,17 +141,100 @@
 	</nav>
 
 	<!-- Contenido de la página web -->
-	<div id="inicio" class="info" style="background-color: #d4f0fc">
-		<h1>¿Que es un algoritmo voraz?</h1>
-		<p style="margin-right: 1000px;">Existe un buen número de métodos que los matemáticos y científicos emplean cuando deben resolver problemas complejos. Uno de los más versátiles y simples de entender es el denominado “algoritmo voraz” (Greedy algorithm). A pesar de que no siempre es capaz de encontrar una respuesta óptima, se lo utiliza con frecuencia dado que es muy rápido. Te contamos en qué consiste, qué ventajas tiene y cómo utilizarlo.</p>
-        <h1>¿?</h1>
+	<div id="inicio" class="info" style="background-color: #d4f0fc" >
+		<h1 style="text-align: center;">¿Que es un algoritmo voraz?</h1>
+		<div style="margin-left: 250px;margin-left: 250px">
+			<div class="text-container">
+				<ul style="margin-top: 90px;">Backtracking (o vuelta atrás) es una técnica algorítmica para encontrar soluciones a problemas que tienen una solución completa, en los que el orden de los elementos no importa, y en los que existen una serie de variables, a cada una de las cuales, debemos asignarle un valor teniendo en cuenta unas restricciones dadas.
+					O lo que es lo mismo, es una estrategia algorítmica que busca todas las posibles soluciones dado un conjunto de variables inicial para encontrar el resultado definido por el problema. </ul>		
+					<div class=" right-image" style="margin-right:600px;margin-left:50px ;">
+						<img src="./image/images.png"  width="300"alt="Algoritmo de ataques de fuerza bruta">
+					</div>
+				</div>
+				<div>
+					<dt style="font-size: 20px;margin-top: 80px;">características de los algoritmos Voraces </dt>
+				</div>
+				<div style="margin-right:600px;margin-top: 20PX;">
+					Se utilizan generalmente para resolver problemas de optimización (obtener el máximo o el mínimo). Toman decisiones en función de la información que está disponible en cada momento. Una vez tomada la decisión, ésta no vuelve a replantearse en el futuro. Suelen ser rápidos y fáciles de implementar. No siempre garantizan alcanzar la solución óptima.
+					El enfoque “greedy” no nos garantiza obtener soluciones óptimas. Por lo tanto, siempre habrá que estudiar la corrección del algoritmo para demostrar si las soluciones obtenidas son óptimas o no.
+				</div>
+				<div>
+					<dt style="font-size: 20px;margin-top: 40px;">En la tabla que veran a continuación colocaremos las ventajas y las desventajas de los algoritmos Voraces</dt>
+				</div>
+				<div style="margin-top: 5px;margin-right: 500px;">
+					<table>
+						<tr>
+							<th>Ventajas</th>
+							<th>Desventajas</th>
+						</tr>
+						<tr>
+							<td>Son fáciles de entender y de implementar.</td>
+							<td>No siempre encuentran la solución óptima.</td>
+						</tr>
+						<tr>
+							<td>Tienen una complejidad temporal eficiente.</td>
+							<td>Pueden llevar a soluciones subóptimas</td>
+						</tr>
+						<tr>
+							<td>En general, requieren menos recursos.</td>
+							<td>No siempre están disponibles para todos los problemas.</td>
+						</tr>
+						<tr>
+							<td>Son útiles para resolver algunos problemas NP.</td>
+							<td>Requieren que el problema tenga ciertas propiedades clave.</td>
+						</tr>
+					</table>
+				</div>
+				<div style="margin-top: 30px;">
+					<dl>
+						<dt style="font-size: 40px;">sobre nosotros</dt>
+						<dt>pagina realizada por:</dt> 
+						<dt>Aldo Daniel Reyes Carrillo</dt>
+						<dt>Jaqueline Guadalupe Simon Gaspar</dt>
+						<dt>Oscar Martinez Gonzales</dt>
+					</dl>
+				</div>
+				<div style="margin-top: 30px;">
+					<p style="font-size: 40px;">Bibliografia</p>
+					<li style="margin-top: 10px;">
+						<a href="https://es.wikipedia.org/wiki/Algoritmo_voraz" target="_blank">Algoritmos Voraces</a>
+					</li>
+					<li style="margin-top: 10px;">
+						<a href="https://www.geeksforgeeks.org/introduction-to-divide-and-conquer-algorithm-data-structure-and-algorithm-tutorials/" target="_blank">Divide y venceras</a>
+					</li>
+					<li style="margin-top: 10px;">
+						<a href="https://brilliant.org/wiki/floyd-warshall-algorithm/" target="_blank">Floyd-Warshall</a>
+					</li>
+					<li style="margin-top: 10px;">
+						<a href="https://www.programiz.com/dsa/floyd-warshall-algorithm" target="_blank">Floyd-Warshall</a>
+					</li>
+					<li style="margin-top: 10px;">
+						<a href="https://sites.google.com/site/complejidadalgoritmicaes/prim" target="_blank">Prim</a>
+					</li>
+					<li style="margin-top: 10px;">
+						<a href="https://sites.google.com/site/complejidadalgoritmicaes/kruskal" target="_blank">Kruskal</a>
+					</li>
+					<li style="margin-top: 10px;">
+						<a href="https://sites.google.com/site/programacioniiuno/temario/unidad-6---anlisis-de-algoritmos/algoritmo-quicksort" target="_blank">Quicksort</a>
+					</li>
+					<li style="margin-top: 10px;">
+						<a href="https://docs.jjpeleato.com/algoritmia/backtracking" target="_blank">Backtracking</a>
+					</li>
+					<li style="margin-top: 10px;">
+						<a href="https://runestone.academy/ns/books/published/pythoned/Recursion/ProgramacionDinamica.html#:~:text=La%20programación%20dinámica%20es%20una,el%20menor%20número%20de%20monedas." target="_blank">Programación-dinámica</a>
+					</li>
+					<li style="margin-top: 10px;">
+						<a href="https://keepcoding.io/blog/como-hacer-un-ciberataque-de-fuerza-bruta/#:~:text=Un%20ataque%20de%20fuerza%20bruta%20consiste%20en%20adivinar%20la%20contraseña,proviene%20de%20un%20host%20diferente." target="_blank">Fuerza-Bruta</a>
+					</li>
+				</div>
+		</div>
     </div>
 	<!-- inicio del div de dijsktra-->
 	<div id="algoritmos-dijkstra" class="info" style="background-color: #d4f0fc">
 		<h1 style="text-align: center;">Algoritmos dijkstra</h1>
 		<div style="margin-left: 250px;margin-left: 250px;">
 			<div class="text-container">
-				<p>El algoritmo de Dijkstra, también llamado algoritmo de caminos mínimos, es un algoritmo para la determinación del camino más corto dado un vértice origen al resto de los vértices en un grafo con pesos en cada arista.</p>
+				<p  style="margin-top: 90px;">El algoritmo de Dijkstra, también llamado algoritmo de caminos mínimos, es un algoritmo para la determinación del camino más corto dado un vértice origen al resto de los vértices en un grafo con pesos en cada arista.</p>
 		<div class=" right-image" style="margin-right:600px;margin-left:50px ;">
 			<img src="./image/dijkstra.png"  width="250"alt="Algoritmo de Dijkstra">
 		</div>
@@ -254,7 +354,7 @@
 		<h1 style="text-align: center;">Algoritmo Floyd-Warshall</h1>
 		<div style="margin-left: 250px;margin-left: 250px;">
 		<div class="text-container">
-			<p>El algoritmo de Floyd-Warshall es un algoritmo de ruta más corta para gráficos . Al igual que el algoritmo de Bellman-Ford o el algoritmo de Dijkstra , calcula el camino más corto en un gráfico. Sin embargo, Bellman-Ford y Dijkstra son algoritmos de fuente única y ruta más corta. Esto significa que solo calculan la ruta más corta desde una sola fuente. Floyd-Warshall, por otro lado, calcula las distancias más cortas entre cada par de vértices en el gráfico de entrada.</p>
+			<p  style="margin-top: 90px;">El algoritmo de Floyd-Warshall es un algoritmo de ruta más corta para gráficos . Al igual que el algoritmo de Bellman-Ford o el algoritmo de Dijkstra , calcula el camino más corto en un gráfico. Sin embargo, Bellman-Ford y Dijkstra son algoritmos de fuente única y ruta más corta. Esto significa que solo calculan la ruta más corta desde una sola fuente. Floyd-Warshall, por otro lado, calcula las distancias más cortas entre cada par de vértices en el gráfico de entrada.</p>
 	<div class=" right-image" style="margin-right:600px;margin-left:50px ;">
 		<img src="./image/Floyd-Warshall-Algorithm.png"  width="250"alt="Algoritmo de Dijkstra">
 	</div>
@@ -356,7 +456,7 @@
 		<h1 style="text-align: center;">Algoritmos Prim</h1>
 		<div style="margin-left: 250px;margin-left: 250px;">
 			<div class="text-container">
-				<p>El algoritmo de Prim, dado un grafo conexo, no dirigido y ponderado, encuentra un árbol de expansión mínima. Es decir, es capaz de encontrar un subconjunto de las aristas que formen un árbol que incluya todos los vértices del grafo inicial, donde el peso total de las aristas del árbol es el mínimo posible.</p>
+				<p  style="margin-top: 90px;">El algoritmo de Prim, dado un grafo conexo, no dirigido y ponderado, encuentra un árbol de expansión mínima. Es decir, es capaz de encontrar un subconjunto de las aristas que formen un árbol que incluya todos los vértices del grafo inicial, donde el peso total de las aristas del árbol es el mínimo posible.</p>
 		<div class=" right-image" style="margin-right:600px;margin-left:50px ;">
 			<img src="./image/7.png"  width="250"alt="Algoritmo de Prim">
 		</div>
@@ -440,7 +540,7 @@
 				<h1 style="text-align: center;">Algoritmos Kruskal</h1>
 				<div style="margin-left: 250px;margin-left: 250px">
 					<div class="text-container">
-						<p>El algoritmo de Prim, dado un grafo conexo, no dirigido y ponderado, encuentra un árbol de expansión mínima. Es decir, es capaz de encontrar un subconjunto de las aristas que formen un árbol que incluya todos los vértices del grafo inicial, donde el peso total de las aristas del árbol es el mínimo posible.</p>
+						<p  style="margin-top: 90px;">El algoritmo de Prim, dado un grafo conexo, no dirigido y ponderado, encuentra un árbol de expansión mínima. Es decir, es capaz de encontrar un subconjunto de las aristas que formen un árbol que incluya todos los vértices del grafo inicial, donde el peso total de las aristas del árbol es el mínimo posible.</p>
 				<div class=" right-image" style="margin-right:600px;margin-left:50px ;">
 					<img src="./image/7.png"  width="250"alt="Algoritmo de Prim">
 				</div>
@@ -527,7 +627,7 @@
 				<h1 style="text-align:center;">Algoritmos de fuerza bruta</h1>
 				<div style="margin-left: 250px;margin-left: 250px">
 					<div class="text-container">
-						<p>Un ataque de fuerza bruta consiste en adivinar la contraseña y/o el nombre de usuario de una persona por medio de la automatización de pruebas de ensayo y error. Algunas herramientas permiten realizar estas pruebas y simular que cada una de ellas proviene de un host diferente. </p>
+						<p  style="margin-top: 90px;">Un ataque de fuerza bruta consiste en adivinar la contraseña y/o el nombre de usuario de una persona por medio de la automatización de pruebas de ensayo y error. Algunas herramientas permiten realizar estas pruebas y simular que cada una de ellas proviene de un host diferente. </p>
 				<div class=" right-image" style="margin-right:600px;margin-left:50px ;">
 					<img src="./image/que-es-ataque-fuerza-bruta.jpg"  width="250"alt="Algoritmo de ataques de fuerza bruta">
 				</div>
@@ -597,38 +697,201 @@
 			</div>
 			<!--fin de div de fuerza bruta-->
 
-
+			<!--incio de div de divide y venceras-->
 		<div id="algoritmo-Divide-vencerás" class="info" style="background-color: #d4f0fc;">
 			<h1 style="text-align: center;font-size: 20px;">Algoritmo divide y venceras</h1>
-			<div  style="max-width: 100%;margin-left: 25%;margin-right: 25%;">
+			<div  style="margin-left: 250px;margin-left: 250px">
 				<div class="text-container">
-					<ul>Divide y vencerás es un paradigma algorítmico, similar a los paradigmas de programación Dinámica y Algoritmos ávidos o glotones. Un algoritmo Divide y Vencerás típico resuelve un problema siguiendo estos 3 pasos. </ul>
-					<li>Dividir: Descomponer el problema en sub-problemas del mismo tipo. Este paso involucra descomponer el problema original en pequeños sub-problemas. Cada sub-problema debe representar una parte del problema original. Por lo general, este paso emplea un enfoque recursivo para dividir el problema hasta que no es posible crear un sub-problema más.</li>
-					<li>Vencer:  Resolver los sub-problemas recursivamente. Este paso recibe un gran conjunto de sub-problemas a ser resueltos. Generalmente a este nivel, los problemas se resuelven por sí solos.</li>
-					<li>Combinar: Combinar las respuestas apropiadamente. Cuando los sub-problemas son resueltos, esta fase los combina recursivamente hasta que estos formulan la solución al problema original. Este enfoque algorítmico trabaja recursivamente y los pasos de conquista y fusión trabajan tan a la par que parece un sólo paso. </li>
-			<div class=" right-image" style="margin-right:20%;margin-left:20% ;">
+					<ul style="margin-top: 90px;">Divide y vencerás es un paradigma algorítmico, similar a los paradigmas de programación Dinámica y Algoritmos ávidos o glotones. Un algoritmo Divide y Vencerás típico resuelve un problema siguiendo estos 3 pasos. </ul>		
+			<div class=" right-image" style="margin-right:600px;margin-left:50px ;">
 				<img src="./image/algo76.png"  width="300"alt="Algoritmo de ataques de fuerza bruta">
 			</div>
 				</div>
-				
+				<div style="margin-right: 400px;margin-top: 20px;">
+					<li>Dividir: Descomponer el problema en sub-problemas del mismo tipo. Este paso involucra descomponer el problema original en pequeños sub-problemas. Cada sub-problema debe representar una parte del problema original. Por lo general, este paso emplea un enfoque recursivo para dividir el problema hasta que no es posible crear un sub-problema más.</li>
+					<li> Vencer:  Resolver los sub-problemas recursivamente. Este paso recibe un gran conjunto de sub-problemas a ser resueltos. Generalmente a este nivel, los problemas se resuelven por sí solos.</li>
+					<li> Combinar: Combinar las respuestas apropiadamente. Cuando los sub-problemas son resueltos, esta fase los combina recursivamente hasta que estos formulan la solución al problema original. Este enfoque algorítmico trabaja recursivamente y los pasos de conquista y fusión trabajan tan a la par que parece un sólo paso.</li>
+				</div>
+				<div>
+					<dt style="font-size: 20px;margin-top: 30px;">En la tabla que veran a continuación colocaremos las ventajas y las desventajas de los algoritmos divide y vencerás</dt>
+				</div>
+				<div  style="margin-top: 20px;margin-right: 500px;">
+					<table>
+						<tr>
+							<th>Ventajas</th>
+							<th>Desventajas</th>
+						</tr>
+						<tr>
+							<td>Permite resolver problemas grandes dividiéndolos en subproblemas más pequeños y manejables</td>
+							<td>En algunos casos, puede no ser fácil identificar la mejor forma de dividir el problema</td>
+						</tr>
+						<tr>
+							<td>Cada subproblema puede resolverse de manera independiente, lo que permite paralelizar la solución para acelerar el tiempo de cómputo</td>
+							<td>En algunos casos, puede ser necesario combinar las soluciones de los subproblemas para obtener la solución del problema original</td>
+						</tr>
+						<tr>
+							<td>En general, tiene una complejidad de tiempo de ejecución logarítmica o polinómica, lo que lo hace eficiente para resolver problemas grandes</td>
+							<td>Para algunos problemas específicos, puede ser necesario un enfoque diferente para lograr la mejor eficiencia </td>
+						</tr>
+						<tr>
+							<td>Es una técnica muy utilizada en algoritmos de búsqueda y ordenamiento de datos</td>
+							<td>Puede ser difícil de aplicar a problemas que no se prestan fácilmente a la división en subproblemas más pequeños</td>
+						</tr>
+					</table>
+					<div >
+						<div style="margin-right:500px;margin-top: 20PX;">
+							<p style="font-size: 20px;">A continuación les mostrare un pequeño ejemplo de como seria un algoritmo divide y venceras.</p>
+						</div>
+					</div>
+					<div>
+						<p>usaremos este conjunto de numeros como ejemplo del algoritmo Quicksort</p>
+						<p style="background-color: aquamarine;margin-right:700px;font-size: 20px;">[ 42, 124, 23, 5, 89, -1, 44, 643, 34]</p>
+						<p>En nuestro ejemplo vamos a seleccionar el primer elemento de la lista como el pivot.</p>
+						<p>Veamos entonces, paso a paso se va a ir formando este árbol de llamados recursivos. En rojo mostramos el pivot. A izquierda las sublistas menores, y a la derecha la de los mayores.</p>
+						<img src="./image/quick-removebg-preview.png "  width="400" style="margin-top: 20px;margin-left: 200px;" >
+						<p>En verde están los nodos "caso base", es decir lista de un único elemento o bien lista vacía.</p>
+						<p>Entonces estos nodos se van a resolver fácil y se van a concatenar con los pivots de arriba. Así empezamos a volver en los llamados recursivos.</p>
+						<img src="./image/quick-removebg-preview (1).png"width="400" style="margin-top: 20px;margin-left: 200px;" >
+						<p>Si sacamos las listas originales de cada nodo y solo dejamos los pivots, queda más claro:</p>
+						<img src="./image/1aHvELQ8Erwn1db6H22l_Exaxn-CBowzE-removebg-preview.png" width="400" style="margin-top: 20px;margin-left: 200px;">
+						<p>Ya tenemos todo el tercer nivel resuelto así que cada par va a retornar para concatenarse entre sí con el pivot en el medio.</p>
+						<img src="./image/Captura_de_pantalla_2023-05-07_140000-removebg-preview.png" width="400" style="margin-top: 20px;margin-left: 200px;">
+						<p>Ya casi estamos. Tenemos dos listas ordenadas, la de los menores y la de los mayores, y el primer pivot. Concatenamos y eso nos da el resultado final:</p>
+						<img src="./image/1OBTahlHJEodxIiBixqAilacNP3h7lftd.png" width="400" style="margin-top: 20px;margin-left: 200px;">
+					</div>
+					<div style="margin-top: 30px;">
+						<p style="font-size: 30px;">Aqui un pequeño ejemplo del algoritmo de Prim</p>
+						<video width="640" height="360" controls style="margin-top: 10px;">
+							<source src="./image/Divide y vencerás.mp4" type="video/mp4">
+							Tu navegador no soporta la etiqueta de video.
+						</video>
+					</div>
 			</div>
 			</div>
-
-
-
-			<div id="algoritmo-Backtraking" class="info">
-		<h1>Algoritmo Backtraking</h1>
-		<p>ejemplo de Backtraking</p>
+		</div>
+		<!--fin de div de divide y venceras-->
+			<div id="algoritmo-Backtraking" class="info"style="background-color: #d4f0fc;">
+		<h1 style="text-align: center;">Algoritmo Backtraking</h1>
+		<div  style="margin-left: 250px;margin-left: 250px">
+		<div class="text-container">
+		<ul style="margin-top: 180px;">Backtracking (o vuelta atrás) es una técnica algorítmica para encontrar soluciones a problemas que tienen una solución completa, en los que el orden de los elementos no importa, y en los que existen una serie de variables, a cada una de las cuales, debemos asignarle un valor teniendo en cuenta unas restricciones dadas.
+			O lo que es lo mismo, es una estrategia algorítmica que busca todas las posibles soluciones dado un conjunto de variables inicial para encontrar el resultado definido por el problema. </ul>		
+			<div class=" right-image" style="margin-right:600px;margin-left:50px ;">
+				<img src="./image/unnamed.png"  width="300"alt="Algoritmo de ataques de fuerza bruta">
 			</div>
-
-
-
-			<div id="Programación-dinámica" class="info">
-		<h1>Programación dinámica</h1>
-		<p>ejemplo de Programación dinámica</p>
+		</div>
+		<div>
+			<dt style="font-size: 20px;margin-top: 80px;">En la tabla que veran a continuación colocaremos las ventajas y las desventajas de los algoritmos de ataque de fuerza bruta.</dt>
+		</div>
+		<div style="margin-top: 20px;margin-right: 500px;">
+			<table>
+				<th>Ventajas</th>
+				<th>Desventajas</th>
+				<tr>
+					<td>Puede encontrar soluciones óptimas si está diseñado correctamente</td>
+					<td>Puede ser muy lento y requiere mucho tiempo de procesamiento para problemas grandes</td>
+				</tr>
+				<tr>
+					<td>Es eficiente en términos de memoria ya que utiliza una pila para almacenar soluciones parciales</td>
+					<td>No garantiza que se encuentre una solución al problema</td>
+				</tr>
+				<tr>
+					<td>Es útil para una amplia variedad de problemas, incluyendo problemas de optimización, búsqueda y decisión</td>
+					<td>Puede encontrar múltiples soluciones, lo que puede ser un problema para algunos problemas</td>
+				</tr>
+				<tr>
+					<td>Puede ser paralelizado fácilmente para mejorar el tiempo de ejecución</td>
+					<td>La complejidad de la implementación aumenta con la complejidad del problema</td>
+				</tr>
+				<tr>
+					<td>Puede ser utilizado en problemas que no se pueden resolver por fuerza bruta</td>
+					<td>No es fácil determinar si un problema se puede resolver mediante backtracking o no</td>
+				</tr>
+				<tr>
+					<td>Tiene una estructura recursiva simple que lo hace fácil de entender e implementar</td>
+					<td>Puede requerir una gran cantidad de espacio de memoria para problemas complejos debido a la necesidad de almacenar soluciones parciales</td>
+				</tr>
+				<tr>
+					<td>Puede encontrar soluciones subóptimas si se diseña de manera subóptima</td>
+					<td>Es difícil evaluar el tiempo de ejecución para problemas grandes y complejos debido a su naturaleza recursiva.</td>
+				</tr>
+			</table>
+			<div style="margin-right:300px;margin-top: 20PX;">
+				<ul style="font-size: 20px;"> Funcionamiento del algoritmo backtracking</ul>
+				<li>Definir el problema: se debe tener una idea clara del problema que se quiere resolver y de los posibles caminos que se pueden tomar para llegar a una solución.</li>
+				<li>Definir el conjunto de soluciones: se deben identificar todas las posibles soluciones del problema, para lo cual se pueden utilizar diferentes técnicas como la enumeración, la generación de árboles o la exploración de grafos.</li>
+				<li>Generar una solución: se debe generar una solución inicial y comprobar si es válida.</li>
+				<li>Evaluar la solución: se debe evaluar la solución generada y determinar si cumple con los criterios de validez establecidos para el problema.</li>
+				<li>Si la solución es válida, se debe guardar. En caso contrario, se debe descartar.</li>
+				<li>Continuar explorando soluciones: se debe continuar generando y evaluando soluciones hasta encontrar una solución óptima o hasta agotar todas las posibilidades.</li>
+				<li>Retroceder y explorar otras soluciones: si se alcanza un punto en el que no es posible continuar, se debe retroceder a la última decisión tomada y explorar otras soluciones a partir de ese punto.</li>
+				<li>Repetir el proceso: se debe repetir el proceso hasta encontrar una solución óptima o hasta agotar todas las posibilidades.</li>
 			</div>
-
-
-
+			<div style="margin-top: 30px;">
+				<p style="font-size: 30px;">Aqui un pequeño ejemplo del algoritmo de backtracking</p>
+				<video width="640" height="360" controls style="margin-top: 10px;">
+					<source src="./image/Algoritmia - Ejercicio Backtracking - Andrés Muñoz.mp4" type="video/mp4">
+					Tu navegador no soporta la etiqueta de video.
+				</video>
+			</div>
+		</div>
+	</div>
+	</div>
+		
+			<!--incio de div de programacion dinamica-->
+			<div id="Programación-dinámica" class="info" style="background-color: #d4f0fc;">
+		<h1 style="text-align: center;">Programación dinámica</h1>
+		<div style="margin-left: 250px;margin-left: 250px">
+			<div class="text-container">
+				<ul style="margin-top: 90px;">La programación dinámica es un método de optimización que puede aplicarse a diferentes y numerosos problemas, algunos de los cuales ya han sido analizados en programación lineal y programación entera. Los parámetros usados en la programación dinámica pueden ser estocásticos o probabilísticos y determinísticos.
+					La programación dinámica tiene como finalidad encontrar una solución de un problema de optimización en forma secuencial. A diferencia de la programación lineal, la programación entera no es un algoritmo de solución única, sino más bien un método para resolver un problema grande y único solventando una secuencia de problemas más pequeños, sin importar el número de ellos. La programación dinámica permite resolver un problema que depende del tiempo en forma de una continuidad de problemas de un sólo periodo, en donde los parámetros de cada periodo dependen del periodo que se considera; es posible que no se conozca la cuantificación de cada periodo sino hasta que éste llega. </ul>		
+					<div class=" right-image" style="margin-right:500px;margin-left:50px ;">
+						<img src="./image/images__1_-removebg-preview.png"  width="200"alt="Algoritmo de ataques de fuerza bruta" style="max-width: fit-content;">
+					</div>
+				</div>
+				<div>
+					<dt style="font-size: 20px;margin-top: 80px;">En la tabla que veran a continuación colocaremos las ventajas y las desventajas de la programación dinámica.</dt>
+				</div>
+			<div  style="margin-top: 20px;margin-right: 500px;">
+				<table>
+					<tr>
+						<th>Ventajas</th>
+						<th>Desventajas</th>
+					</tr>
+					<tr>
+						<td>Permite resolver problemas complejos de manera eficiente</td>
+						<td>Puede ser difícil de entender e implementar</td>
+					</tr>
+					<tr>
+						<td>Evita cálculos repetitivos al almacenar subproblemas previamente resueltos</td>
+						<td>Requiere de memoria adicional para almacenar los resultados previos</td>
+					</tr>
+					<tr>
+						<td>Optimiza el tiempo de ejecución al evitar recalcular soluciones previas</td>
+						<td>No siempre es la solución más óptima, ya que depende de la calidad de la función de evaluación utilizada</td>
+					</tr>
+					<tr>
+						<td>Es útil en problemas de optimización y decisiones secuenciales</td>
+						<td>Requiere de una estructura recursiva o iterativa para su implementación</td>
+					</tr>
+				</table>
+			</div>
+				<div style="margin-top: 30px;">
+					<ul style="font-size: 20px;"> Funcionamiento de la programación dinámica</ul>
+					<li>Caracterizar la estructura del problema: Identificar las subestructuras óptimas del problema y cómo están relacionadas entre sí.</li>
+					<li>Definir la función de recursión: Escribir una función que defina la relación entre el problema original y sus subproblemas más pequeños.</li>
+					<li>Implementar la función de recursión: Codificar la función de recursión utilizando una técnica de memoización para evitar recalculaciones innecesarias.</li>
+					<li>Resolver el problema original: Utilizando la función de recursión para calcular la solución al problema original.</li>
+					<li>Analizar la complejidad: Asegurarse de que la complejidad de la solución es aceptable para el tamaño de entrada del problema.</li>
+				</div>
+				<div style="margin-top: 30px;">
+					<p style="font-size: 30px;">Aqui un pequeño ejemplo del algoritmo de Programación dinámica</p>
+					<video width="640" height="360" controls style="margin-top: 10px;">
+						<source src="./image/Programación dinámica. Problema de la Mochila..mp4" type="video/mp4">
+						Tu navegador no soporta la etiqueta de video.
+					</video>
+				</div>
+			</div>
+			</div>
 		</body>
             </html>

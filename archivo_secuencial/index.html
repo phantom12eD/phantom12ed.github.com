@@ -6,13 +6,44 @@
     <title>Mis XV</title>
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="shortcut icon" href="./imagenes/rose-bouquet-on-isolated-white-background-flowers-clipart-for-date-celebration-valentines-day-romantic-wedding-gift-illustration-pink-rosy-bunch-with-red-ribbon-closeup-floral-drawing-vector-removebg-.ico" type="image/x-icon">
+    <style>
+        #mapa {
+            display: none;
+            margin-top: 3%;
+            margin-left: 20%;
+            margin-right: 20%;
+            margin-left: 25%;
+        }
+    </style>
 </head>
 <body style="background-color: rgb(130, 59, 181);">
-    <div style="margin-left:25%;margin-top: 10%;margin-right: 20%;"> hola
-        <img src="./imagenes/boletoejemlpo.jpg" alt="" style=" max-width: 130%;height: auto;">
+    <div id="imagen" style="margin-left:25%;margin-top: 10%;margin-right: 20%;">
+        <div style="position: relative;">
+            <img src="./imagenes/boletoejemlpo.jpg" alt="" style="max-width: 130%; height: auto;">
+            <button onclick="mostrarMapa()" style="position: absolute; bottom: -5%; left: 0; right: 0; margin: 0 auto;">Ver Mapa</button>
+        </div>
     </div>
-    <div style="margin-top: 2%;margin-left: auto;;margin-right: 20%;margin-left:25%">
+    <div id="mapa">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3735.335013763501!2d-103.4563756239533!3d20.574372003228483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8428ab579edab72f%3A0x1948c7ef00b866e3!2sVilla%20Amalia%20Eventos!5e0!3m2!1ses-419!2smx!4v1686469238998!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <button onclick="mostrarImagen()">Volver a la imagen</button>
     </div>
+
+    <script>
+        function mostrarMapa() {
+            var divImagen = document.getElementById('imagen');
+            var divMapa = document.getElementById('mapa');
+            
+            divImagen.style.display = 'none';
+            divMapa.style.display = 'block';
+        }
+
+        function mostrarImagen() {
+            var divImagen = document.getElementById('imagen');
+            var divMapa = document.getElementById('mapa');
+            
+            divMapa.style.display = 'none';
+            divImagen.style.display = 'block';
+        }
+    </script>
 </body>
 </html>
